@@ -14,11 +14,9 @@ class HelloWorld {
   // replace the contents of the element with id "time" with the date
   def howdy = "#time *" #> date.map(_.toString)
 
-  /*
-   lazy val date: Date = DependencyFactory.time.vend // create the date via factory
+  // replace the contents of the element with id="token" with "foo", "bar" and "baz"
+  def collectThemAll = "#token *" #> List("foo", "bar", "baz")
 
-   def howdy = "#time *" #> date.toString
-   */
 }
 
 }
