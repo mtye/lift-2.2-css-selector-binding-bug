@@ -18,14 +18,14 @@ If you start up the application with <code>./sbt jetty</code> and direct your br
 [span]http://localhost:8080/span
 [ul]http://localhost:8080/ul
 
-The only difference between the pages is the parent tag of the <pre><code><li></code></pre> tag. When the parent tag is a <pre><code><div></code></pre> or a <pre><code><ul></code></pre>, the page renders correctly, as a unordered list:
+The only difference between the pages is the parent tag of the <code><li></code> tag. When the parent tag is a <code><div></code> or a <code><ul></code>, the page renders correctly, as a unordered list:
 
 * foo
 * bar
 * baz
 
-When the parent is a <pre><code><span></code></pre> tag, however, the binding fails and renders this:
+When the parent is a <code><span></code> tag, however, the binding fails and renders this:
 
 * Uh-oh!
 
-Obviously, a <code><li></code> tag inside a <pre><code><span></code></pre> is not proper HTML, but it's surprising that the binding fails silently in this way.
+Obviously, a <code><li></code> tag inside a <code><span></code> is not proper HTML, but it's surprising that the binding fails silently in this way.
