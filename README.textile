@@ -3,13 +3,13 @@ The project in this repo demonstrates a potential bug in the "CSS Selector Bindi
 [css-binding]http://www.assembla.com/wiki/show/liftweb/Binding_via_CSS_Selectors
 [lift-2.2]http://liftweb.net/22_final
 
-Starting with the "lift_basic":lift-basic template provided in the Lift 2.2 sbt Zip, a <code>collectThemAll</code> method was added to the <code> "HelloWorld":hello-world </code> snippet. According to the "*Binding to children*":binding-to-kids section of the _Binding via CSS Selectors_ Assembla page, this method should make three copies of the element with an <code>id="token"</code> attribute and replace the content of each element with the strings in the <code>List("foo", "bar", "baz")</code>.
+Starting with the "lift_basic":lift-basic template provided in the Lift 2.2 sbt Zip, a <code>collectThemAll</code> method was added to the "HelloWorld":hello-world snippet. According to the "*Binding to children*":binding-to-kids section of the _Binding via CSS Selectors_ Assembla page, this method should make three copies of the element with an <code>id="token"</code> attribute and replace the content of each element with the strings in the <code>List("foo", "bar", "baz")</code>.
 
 [lift-basic]http://github.com/lift/lift_22_sbt/tree/master/lift_basic
 [hello-world]http://github.com/mtye/lift-2.2-css-selector-binding-bug/blob/master/src/main/scala/code/snippet/HelloWorld.scala
 [binding-to-kids]http://www.assembla.com/wiki/show/liftweb/Binding_via_CSS_Selectors#binding_to_children
 
-If you start up the application with <code>./sbt jetty</code> and direct your browser to "localhost:8080":localhost, you will see three links in the menu, "div":div, "span":span, and "ul":ul. Each page invokes the <code>collectThemAll</code> method in the <code> "HelloWorld":hello-world </code> snippet and binds it to the same element:
+If you start up the application with <code>./sbt jetty</code> and direct your browser to "localhost:8080":localhost, you will see three links in the menu, "div":div, "span":span, and "ul":ul. Each page invokes the <code>collectThemAll</code> method in the "HelloWorld":hello-world snippet and binds it to the same element:
 
 <pre><code><li id="token">Uh-oh!</li></code></pre>
 
